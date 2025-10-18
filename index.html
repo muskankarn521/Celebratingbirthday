@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Birthday Surprise for Raunak</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Surprise for Raunak</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <!-- Page 1 -->
-  <div class="page1">
-    <h1>Balloon pop kr gdhu 🎈</h1>
+  <div class="page page1">
+    <div class="overlay"></div>
+    <h1>Click the balloon 🎈</h1>
     <div class="balloon" onclick="popBalloon()">🎈</div>
     <div class="panda">🐼</div>
   </div>
 
   <!-- Page 2 -->
-  <div class="page2 hidden">
+  <div class="page page2 hidden">
+    <div class="overlay"></div>
     <canvas id="confetti"></canvas>
     <div class="container">
       <h1 id="name"></h1><span id="cursor">|</span>
-      <p>Happy Birthday my hero ❤️</p>
+      <p class="birthday-text">Happy Birthday my hero ❤️</p>
       <button id="loveBtn" class="hidden" onclick="showPage3()">Open this if you love me</button>
     </div>
   </div>
 
   <!-- Page 3 -->
-  <div class="page3 hidden">
+  <div class="page page3 hidden">
+    <div class="overlay"></div>
     <div class="photo-container">
       <p class="love-text">Me ❤️ You</p>
       <img src="your_photo.jpg" alt="Me and You">
     </div>
-
     <div class="paper-message">
       <p>Happy birthday mera pyara hubby !!!<br>
       Jb hmlog milenge to hm tmko aise hi kissiiee krenge...<br>
@@ -38,7 +41,8 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
+
 
