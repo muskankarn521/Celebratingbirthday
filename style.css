@@ -1,0 +1,15 @@
+body {
+    background-color: #FFFFE0; /* Light yellow background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #8B008B; /* Dark magenta pink font */
+    font-size: 3em;
+    text-align: center;
+}
