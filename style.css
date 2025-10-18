@@ -1,15 +1,43 @@
+/* Body styling with soft gradient */
 body {
-    background-color: #FFFFE0; /* Light yellow background */
+    margin: 0;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #FFD6E0, #FFFACD); /* pastel pink → light yellow */
 }
 
-h1 {
-    color: #8B008B; /* Dark magenta pink font */
-    font-size: 3em;
+/* Container for centering text */
+.container {
     text-align: center;
+}
+
+/* Animated text for name */
+.animated-text {
+    font-size: 4em;
+    font-weight: bold;
+    color: #C71585; /* dark magenta */
+    margin: 0 0 20px 0;
+    animation: bounce 1s infinite alternate;
+}
+
+/* Happy birthday text */
+p {
+    color: #FF1493; /* bright pink */
+    font-size: 2em;
+}
+
+/* Keyframes for bouncing animation */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
