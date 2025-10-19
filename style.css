@@ -103,9 +103,18 @@ body.page1 {
 
 /* --- Page 2 --- */
 body.page2 {
-  background: url('background1.jpg') no-repeat center center/cover;
-  color: white;
+  background: url('background1.jpg') no-repeat center center;
+  background-size: cover;    /* ensures full coverage */
+  background-attachment: fixed; /* optional: keeps background fixed */
+  height: 100vh;             /* full viewport height */
+  width: 100vw;              /* full viewport width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* vertically center content */
+  align-items: center;       /* horizontally center content */
+  overflow: hidden;
 }
+
 .luckiest-guy-regular {
   font-family: "Luckiest Guy", cursive;
   font-weight: 400;
@@ -143,7 +152,7 @@ body.page2 {
   font-size: 1.3rem;
   padding: 10px 20px;
   border-radius: 20px;
-  background: rgba(0, 0, 0, 0.997);
+  background: rgba(254, 157, 157, 0.997);
   cursor: pointer;
   opacity: 0;
   transition: 0.5s;
@@ -156,21 +165,25 @@ body.page2 {
 
 /* --- Page 3 --- */
 body.page3 {
-  background: url('background2.jpg') no-repeat center center/cover;
-  color: white;
-  overflow: hidden;
-  position: relative;
+  background: url('background2.jpg') no-repeat center center;
+  background-size: cover;    
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   text-align: center;
+  position: relative;
 }
 
 .above-photo {
   font-size: 2rem;
+  color: #ffffff;
   margin-bottom: 20px;
-  text-shadow: 0 0 5px black;
+  text-shadow: 0 0 5px rgb(31, 6, 13);
 }
 
 .photo-container {
@@ -180,13 +193,14 @@ body.page3 {
 .center-photo {
   width: 250px;
   border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  box-shadow: 0 0 20px rgba(255, 0, 111, 0.5);
 }
 
 .secret-note {
   margin-top: 20px;
   font-size: 1.5rem;
-  text-shadow: 0 0 5px black;
+  color: #ff0066;
+  text-shadow: 0 0 5px rgba(255, 0, 115, 0.885);
 }
 
 /* Canvas for confetti */
