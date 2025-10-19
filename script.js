@@ -33,12 +33,9 @@ if(nameElement){
 
 if(openLink){
   openLink.addEventListener('click', () => {
-    alert("You can link to the next page here."); 
-    // Replace with: window.location.href = 'index2.html';
+    window.location.href = 'index2.html'; // make sure this file exists
   });
 }
-
-
 /* ---------------- PAGE 3: Emoji Confetti ---------------- */
 const confettiCanvas = document.getElementById('confetti');
 if(confettiCanvas){
