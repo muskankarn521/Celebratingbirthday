@@ -10,6 +10,7 @@ body {
   text-align: center;
 }
 
+
 .container {
   display: flex;
   flex-direction: column;
@@ -19,17 +20,37 @@ body {
 /* --- Page 1 --- */
 body.page1 {
   background: url('background.jpg') no-repeat center center/cover;
+  height: 100vh; /* full viewport height */
+  width: 100vw;  /* full viewport width */
+  overflow: hidden;
+  position: relative;
 }
+
 
 .cloud-container {
   position: absolute;
-  top: 15%;
+  top: 25%;
   width: 100%;
   display: flex;
   justify-content: center;
   gap: 15px;
   flex-wrap: wrap;
 }
+
+/* Text above clouds */
+.cloud-title {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 0 0 5px black;
+  z-index: 10;
+}
+
+
+
 
 .cloud {
   background: white;
@@ -48,7 +69,7 @@ body.page1 {
 
 .balloon-section {
   position: absolute;
-  bottom: 20%;
+  bottom: 0%;
   width: 100%;
   text-align: center;
 }
@@ -85,18 +106,24 @@ body.page2 {
   background: url('background1.jpg') no-repeat center center/cover;
   color: white;
 }
+.luckiest-guy-regular {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 #name {
   font-size: 4rem;
-  color: #ff0077; /* neon green */
+  color: #ff0062; /* neon green */
   text-shadow:
-    0 0 5px rgb(253, 255, 105),
-    0 0 10px #edff67,
+    0 0 5px #fafffa,
+    0 0 10px #ffffff,
     0 0 20px #ffffff,
-    0 0 40px rgb(255, 217, 0),
-    0 0 80px rgb(255, 255, 255),
-    0 0 90px rgb(255, 249, 79);
-  border-right: 2px solid #ffffff;
+    0 0 40px rgb(255, 243, 10),
+    0 0 80px rgb(255, 251, 0),
+    0 0 90px rgb(255, 247, 7);
+  border-right: 2px solid #39ff14;
   white-space: nowrap;
   overflow: hidden;
   display: inline-block;
@@ -104,11 +131,11 @@ body.page2 {
 }
 
 @keyframes blink {
-  0%, 100% { border-color: #000000; }
+  0%, 100% { border-color: #fbfffa; }
   50% { border-color: transparent; }
 }
 
-.text1 { color: #ff005d; font-size: 1.8rem; margin-top: 20px; }
+.text1 { color: #ff0084; font-size: 1.8rem; margin-top: 20px; }
 
 
 #openLink {
@@ -116,13 +143,59 @@ body.page2 {
   font-size: 1.3rem;
   padding: 10px 20px;
   border-radius: 20px;
-  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.997);
   cursor: pointer;
   opacity: 0;
   transition: 0.5s;
 }
 
 #openLink:hover {
-  background: rgb(32, 255, 16);
+  background: rgba(255,255,255,0.4);
 }
 
+
+/* --- Page 3 --- */
+body.page3 {
+  background: url('background2.jpg') no-repeat center center/cover;
+  color: white;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.above-photo {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 5px black;
+}
+
+.photo-container {
+  position: relative;
+}
+
+.center-photo {
+  width: 250px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.secret-note {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  text-shadow: 0 0 5px black;
+}
+
+/* Canvas for confetti */
+canvas#confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
