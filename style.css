@@ -86,10 +86,11 @@ body.page1 {
   color: rgb(251, 251, 251);              /* text color */
   font-size: 40px;           /* text size */
   font-weight: bold;         /* make it bold */
-  margin-top: 80px;         /* 👈 lift the text upward */
+  margin-top: -40px;         /* 👈 lift the text upward */
   text-shadow: 0 0 10px #ff0066;/* soft glow */
   cursor: pointer;          /* pointer on hover */
   transition: transform 0.3s ease;
+
 }
 
 .balloon-text:hover {
@@ -132,7 +133,7 @@ body.page2 {
 
 
 #name {
-  font-size: 4rem;
+  font-size: 3rem;
   color: #ff0062; /* neon green */
   text-shadow:
     0 0 5px #fafffa,
@@ -145,7 +146,7 @@ body.page2 {
   white-space: nowrap;
   overflow: hidden;
   display: inline-block;
-  animation: blink 0.7s infinite;
+  animation: blink 0.6s infinite;
 }
 
 @keyframes blink {
@@ -153,7 +154,7 @@ body.page2 {
   50% { border-color: transparent; }
 }
 
-.text1 { color: #ff0084; font-size: 1.8rem; margin-top: 20px; }
+.text1 { color: #ff0084; font-size: 1.8rem; margin-top: 10px; }
 
 
 #openLink {
@@ -203,11 +204,11 @@ body.page3 {
   width: 250px;
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(255, 0, 111, 0.5);
-  margin-top: 100px;
+  
 }
 
 .secret-note {
-  margin-top: -100px;
+  margin-top: -10px;
   font-size: 1.5rem;
   color: #ff0066;
   text-shadow: 0 0 5px rgba(255, 55, 145, 0.885);
